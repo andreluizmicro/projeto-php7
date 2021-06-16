@@ -40,16 +40,33 @@ require_once("config.php");
 // $aluno->setDeslogin("aluno");
 // $aluno->setDessenha("@luno");
 
+###############################################################################################################
 
 // CRIANDO UM NOVO USUÁRIO PASSANDO PARAMETROS
 // $aluno = new Usuario("Marcos", "mar123!#4");
 // $aluno->insert();
 // echo $aluno;
 
-$usuario = new Usuario();
-$usuario->loadById(7);
+###############################################################################################################
 
-$usuario->update("André", "!#@#$!@13412");
+// ATUALIZANDO USUÁRIO 
+// $usuario = new Usuario();
+
+// $usuario->loadById(7);
+
+// $usuario->update("André", "!#@#$!@13412");
+
+// echo $usuario;
+
+
+###############################################################################################################
+
+// DEELETAR USUÁRIO
+$usuario = new Usuario();
+
+$usuario->loadById(3);
+
+$usuario->delete();
 
 echo $usuario;
 
