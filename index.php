@@ -28,8 +28,28 @@ require_once("config.php");
 
 ###############################################################################################################
 // CARREGA UM USUÁRIO USANDO O LOGIN E A SENHA
+// $usuario = new Usuario();
+// $usuario->login("root", "!@#123saa21");
+//echo $usuario;
+
+
+###############################################################################################################
+
+// CRIANDO UM NOVO USUÁRIO SEM PARAMETROS
+// $aluno = new Usuario();
+// $aluno->setDeslogin("aluno");
+// $aluno->setDessenha("@luno");
+
+
+// CRIANDO UM NOVO USUÁRIO PASSANDO PARAMETROS
+// $aluno = new Usuario("Marcos", "mar123!#4");
+// $aluno->insert();
+// echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("root", "!@#123saa21");
+$usuario->loadById(7);
+
+$usuario->update("André", "!#@#$!@13412");
 
 echo $usuario;
 
